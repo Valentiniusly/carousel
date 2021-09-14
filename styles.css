@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Gotham Pro, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 20px;
+}
+:root {
+  --main-color: #00adef;
+}
+
+.slider {
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 1170px;
+}
+
+.slider header {
+  height: 37px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.slider .title {
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444444;
+  width: 240px;
+}
+
+.slider .title-arrow {
+  height: 37px;
+}
+
+.slider .arrows {
+  width: 58px;
+  display: flex;
+  gap: 10px;
+}
+
+.slider .arrow {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.slider .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.x-scroll {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  width: 270px;
+  position: relative;
+}
+
+.card .image {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.card .image img {
+  height: 100%;
+}
+
+.card .labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card .label {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  font-weight: 300;
+}
+
+.card .label.new {
+  color: #3ddc97;
+  background-color: #eefcf6;
+}
+
+.card .label.hot {
+  color: #e49f62;
+  background: #fcf4ed;
+}
+
+.card .spec {
+  color: #888888;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 300;
+}
+
+.card .title {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #444444;
+  margin: 8px 0px;
+}
+
+.card .rate {
+  color: var(--main-color);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card .rate path {
+  fill: var(--main-color);
+  margin-bottom: 33px;
+}
+
+.card .price {
+  font-size: 19px;
+  line-height: 23px;
+  color: #444444;
+  margin: 0px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.card .price-old {
+  font-size: 13px;
+  line-height: 15px;
+  text-decoration-line: line-through;
+  color: #888888;
+  margin: 0px;
+  margin-left: 14px;
+  display: inline-block;
+}
+
+.button {
+  padding: 0 36px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card .actions {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  width: 57px;
+  height: 48px;
+  right: 24px;
+  bottom: 20px;
+}
+
+.card .action {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 247px;
+  }
+  .card .price-old {
+    display: none;
+  }
+  .button {
+    padding: 0 25px;
+  }
+  .card .label.new {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    padding: 0 15px;
+  }
+  .card {
+    width: 85vw;
+  }
+  .slider header .title {
+    width: 98%;
+    font-size: 27px;
+  }
+  .slider .image {
+    height: 98px;
+  }
+  .slider .arrows {
+    display: none;
+  }
+  .slider .cards {
+    gap: 5px;
+  }
+  .slider .labels {
+    flex-direction: column;
+  }
+  .slider .label.new {
+    display: block;
+  }
+  .button {
+    width: 100%;
+    font-size: 13px;
+  }
+  .slider .actions {
+    top: 20px;
+  }
+  .slider .price {
+    font-size: 15px;
+  }
+  .slider .price-old {
+    display: inline-block;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+  .card .title {
+    font-size: 13px;
+  }
+}
